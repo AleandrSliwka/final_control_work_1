@@ -25,23 +25,16 @@ void PrintArray(string[] myArray)
 
 string[] NewArray(string[] myArray)
 {
+  string[] arr = new string[elementCount];
+
   int count = 0;
 
   for (int i = 0; i < myArray.Length; i++)
   {
     if (myArray[i].Length <= 3)
-      count++;
-  }
-
-  string[] arr = new string[count];
-  int j = 0;
-
-  for (int i = 0; i < myArray.Length; i++)
-  {
-    if (myArray[i].Length <= 3)
     {
-      arr[j] = myArray[i];
-      j++;
+      arr[count] = myArray[i];
+      count++;
     }
   }
   return arr;
